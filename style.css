@@ -3,9 +3,8 @@ body,
     background-color: #e8e1db;
     margin: 0px;
     height: 100vh;
-    overflow: hidden;
-    /* margin-bottom: 10px; */
-    /* pad: 5px; */
+    /* overflow: hidden; */
+    -webkit-tap-highlight-color: transparent;
 }
 .svg-disc {
     fill: #6d6c3c;
@@ -19,31 +18,29 @@ body,
 }
 .svg-disc-text {
     fill: #e8e1db;
-    /* user-select: inherit; */
     cursor: pointer;
 }
 .grid-container {
     display: grid;
-    grid-template-rows: 25px auto 45px 25px;
+    grid-template-rows: 50px auto 80px 25px 25px;
     grid-template-columns: auto;
     grid-gap: 5px;
     overflow: hidden;
     height: 100vh;
     outline: red 2px dashed;
-    margin-bottom: 10px;
     border: 2px;
 }
 
 .grid-item-header,
 .grid-item-tree,
 .grid-item-info,
-.grid-item-footer {
+.grid-item-copyright {
     /* border: #362e23 1px solid; */
 }
 
 .grid-item-info {
-    color: #362e23;
     font-size: 24px;
+    position: relative;
 }
 .grid-item-tree {
     overflow: hidden;
@@ -52,20 +49,57 @@ body,
 .svg-tree {
     margin: 0;
     position: absolute;
-    top: 50%;
+    bottom: 0%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, 0%);
+    transform: translate(-50%, -0%);
     /* background-color: black; */
 }
 
-.grid-item-footer,
+.grid-item-copyright,
 .grid-item-info,
 .grid-item-header {
     text-align: center;
 }
 
-.grid-item-header{
+.grid-item-header .title {
+    background-color: #3a3c26;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 22px;
+    color: #e8e1db;
+}
+
+.centered-text {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     font-size: 24px;
-    padding-top: 20px;
+    width: 100%;
+    /* background-color: black; */
+}
+
+.grid-item-header {
+    position: relative;
+}
+a {
+    color: #e8e1db;
+}
+a:hover {
+    color: aqua;
+}
+.grid-item-footer {
+    color: #e8e1db;
+    background-color: #e8e1db;
+}
+
+.contact-info {
+    text-align: center;
+    background-color: #3a3c26;
+    color: #e8e1db;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
